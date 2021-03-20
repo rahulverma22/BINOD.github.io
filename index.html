@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINOD</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html{
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+            overflow-x: hidden;
+        }
+        @media (min-width: 1536px){
+        #container{width: 100%;}
+        #header {
+            height: 70px;
+            display: flex;}
+        ul{
+            list-style: none;
+            background-color: rgba(0, 31, 63, 0.938) ;
+            display: flex;
+            justify-content: space-evenly;
+            height: 70px;
+            width: 100%;
+            max-width: 1536px;
+            position :fixed;}
+        ul li{
+            display : inline-block;
+            padding-top:9px;
+            padding-bottom: 8px;}
+        ul li a{
+            display: block;
+            font-size: 24px;
+            padding: 12px 20px;
+            padding-bottom: 12px;
+            text-decoration: none;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;}
+        ul li a:hover{
+                background-color: red;
+                color:white;
+                font-weight: bold;}
+        .picture{
+            height: 720px;
+            width: 100%;
+            max-width: 1536px;
+            background-image: url(./img/picture.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom :15px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h5{
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            width: 300px;
+        }
+        h5:hover{
+            margin-left: 20px;
+            transition: .1s;
+        }
+        .picture a{
+            text-decoration: none;
+        }
+        .section-1{
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            max-width: 1536px;
+        }
+        #sec1l{
+            order: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 320px;
+        }
+        #sec1r{
+            order: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 320px;
+        }
+        .circle{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 5px solid red;
+        }
+        #search-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 1536px;
+        }
+        h4{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 400px;
+            }
+        h3{
+            text-align: center;
+            margin: 10px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 200px;    
+        }
+        h3:hover{
+            background-color: skyblue;
+            color: darkblue;
+            border: 4px solid darkblue;
+        }
+        .section-1 a{
+            text-decoration: none;
+        }
+        .circle:hover{
+            border: 10px dashed blue;
+        }
+        #search-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 1536px;
+        }
+        #search-section h2{
+            font-weight: bold;
+             color: black;
+             text-align: center;
+              margin-top: 40px;
+              margin-bottom: 60px;
+        }
+        #bng{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1536px;
+        }
+        .boys{
+            order: 1;
+            width: 85%;
+            height: 300px;
+            background-color: skyblue;
+            border: 5px solid darkblue;
+            border-radius: 30px;
+            margin: 0px auto; 
+            padding: 5px 200px;
+            justify-content:center;
+            
+        }
+        .boys h1{
+            color: white;
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .boys:hover{
+            background-image: linear-gradient(to right,blue,white);
+            border-color: darkblue;
+        }
+        .boys p a{
+            background-color: white;
+            border: 3px solid darkblue;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: blue;
+        }
+        .boys p a:hover{
+            background-color: darkblue;
+            border: 5px solid white;
+            color: white;
+            
+        }
+        #girls{
+            order: 2;
+            width: 85%;
+            height: 300px;
+            background-image: linear-gradient(to right,magenta,pink);
+            border: 5px solid darkmagenta;
+            border-radius: 30px;
+            margin: 0px auto; 
+            margin-top: 30px;
+            padding: 5px 200px;
+            justify-content:center;
+        }
+        #girls h1{
+            color: white;
+             margin-top: 15px;
+             text-align: center;
+             margin-bottom: 30px;
+        }
+        #girls:hover{
+            background-image: linear-gradient(to right,pink,magenta);
+            
+        }
+        #girls p a{
+            background-color:white;
+            border: 3px solid darkmagenta;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: magenta;
+        }
+        #girls p a:hover{
+            background-color:darkmagenta;
+            border: 5px solid white;
+            color: white;
+            
+        }
+        #sec-2{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 1536px;
+            height: 420px;
+            margin-top: 40px;
+        }
+        #sec-2 h2{
+            color: white;
+        }
+        #sec-2 p{
+            text-align: justify;
+        }
+        #left{
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #right{
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #left #l1{
+            order: 1;
+            width: 100%;
+            height: 140px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l2{
+            order: 2;
+            width: 100%;
+            height: 140px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l3{
+            order: 3;
+            width: 100%;
+            height: 140px;
+            background-color: maroon;
+        }
+        #right #r1{
+            order: 1;
+            width: 100%;
+            height: 140px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+        }
+        #right #r2{
+            order: 2;
+            width: 100%;
+            height: 140px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+        }
+        #right #r3{
+            order: 3;
+            width: 100%;
+            height: 140px;
+            background-color: #00203fff;
+        }
+        h2{
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #l1 p{
+            color: white;
+            margin: 10px;
+        }
+        #l2 p{
+            color: white;
+            margin: 10px;
+        }
+        #l3 p{
+            color: white;
+            margin: 10px;
+        }
+        #r1 p{
+            color: white;
+            margin: 10px;
+        }
+        #r2 p{
+            color: white;
+            margin: 10px;
+        }
+        #r3 p{
+            color: white;
+            margin: 10px;
+        }
+        #footer{
+            width: 100%;
+            max-width: 1536px;
+            height: 120px;
+            background-color:rgb(0, 31, 63);
+            margin-top: 50px;
+            font-size: 20px;
+            color: white;
+            padding: 30px;
+        }
+        }
+        @media (min-width: 1496px) and (max-width: 1536px){
+            #container{width: 100%;}
+        #header {
+            height: 70px;
+            display: flex;}
+        ul{
+            list-style: none;
+            background-color: rgba(0, 31, 63, 0.938) ;
+            display: flex;
+            justify-content: space-evenly;
+            height: 70px;
+            width: 100%;
+            max-width: 1536px;
+            position :fixed;}
+        ul li{
+            display : inline-block;
+            padding-top:9px;
+            padding-bottom: 8px;}
+        ul li a{
+            display: block;
+            font-size: 24px;
+            padding: 12px 20px;
+            padding-bottom: 12px;
+            text-decoration: none;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;}
+        ul li a:hover{
+                background-color: red;
+                color:white;
+                font-weight: bold;}
+        .picture{
+            height: 720px;
+            width: 100%;
+            max-width: 1536px;
+            background-image: url(./img/picture.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom :15px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h5{
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            width: 300px;
+        }
+        h5:hover{
+            margin-left: 20px;
+            transition: .1s;
+        }
+        .picture a{
+            text-decoration: none;
+        }
+        .section-1{
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        #sec1l{
+            order: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 320px;
+        }
+        #sec1r{
+            order: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 320px;
+        }
+        .circle{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 5px solid red;
+        }
+        #search-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 30px;
+        }
+        h4{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 400px;
+            }
+        h3{
+            text-align: center;
+            margin: 10px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 200px;    
+        }
+        h3:hover{
+            background-color: skyblue;
+            color: darkblue;
+            border: 4px solid darkblue;
+        }
+        .section-1 a{
+            text-decoration: none;
+        }
+        .circle:hover{
+            border: 10px dashed blue;
+        }
+        #search-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        #search-section h2{
+            font-weight: bold;
+             color: black;
+             text-align: center;
+              margin-top: 40px;
+              margin-bottom: 60px;
+        }
+        .boys{
+            
+            width: 85%;
+            height: 300px;
+            background-color: skyblue;
+            border: 5px solid darkblue;
+            border-radius: 30px;
+            margin: 0px auto; 
+            padding: 5px 200px;
+            justify-content:center;
+            
+        }
+        .boys h1{
+            color: white;
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .boys:hover{
+            background-image: linear-gradient(to right,blue,white);
+            border-color: darkblue;
+        }
+        .boys p a{
+            background-color: white;
+            border: 3px solid darkblue;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: blue;
+        }
+        .boys p a:hover{
+            background-color: darkblue;
+            border: 5px solid white;
+            color: white;
+            
+        }
+        #girls{
+            width: 85%;
+            height: 300px;
+            background-image: linear-gradient(to right,magenta,pink);
+            border: 5px solid darkmagenta;
+            border-radius: 30px;
+            margin: 0px auto; 
+            margin-top: 30px;
+            padding: 5px 200px;
+            justify-content:center;
+        }
+        #girls h1{
+            color: white;
+             margin-top: 15px;
+             text-align: center;
+             margin-bottom: 30px;
+        }
+        #girls:hover{
+            background-image: linear-gradient(to right,pink,magenta);
+            
+        }
+        #girls p a{
+            background-color:white;
+            border: 3px solid darkmagenta;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: magenta;
+        }
+        #girls p a:hover{
+            background-color:darkmagenta;
+            border: 5px solid white;
+            color: white;
+            
+        }
+        #sec-2{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 420px;
+            margin-top: 40px;
+        }
+        #sec-2 h2{
+            color: white;
+        }
+        #sec-2 p{
+            text-align: justify;
+        }
+        #left{
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #right{
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #left #l1{
+            order: 1;
+            width: 100%;
+            height: 140px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l2{
+            order: 2;
+            width: 100%;
+            height: 140px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l3{
+            order: 3;
+            width: 100%;
+            height: 140px;
+            background-color: maroon;
+        }
+        #right #r1{
+            order: 1;
+            width: 100%;
+            height: 140px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+        }
+        #right #r2{
+            order: 2;
+            width: 100%;
+            height: 140px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+        }
+        #right #r3{
+            order: 3;
+            width: 100%;
+            height: 140px;
+            background-color: #00203fff;
+        }
+        h2{
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #l1 p{
+            color: white;
+            margin: 10px;
+        }
+        #l2 p{
+            color: white;
+            margin: 10px;
+        }
+        #l3 p{
+            color: white;
+            margin: 10px;
+        }
+        #r1 p{
+            color: white;
+            margin: 10px;
+        }
+        #r2 p{
+            color: white;
+            margin: 10px;
+        }
+        #r3 p{
+            color: white;
+            margin: 10px;
+        }
+        #footer{
+            width: 100%;
+            height: 120px;
+            background-color:rgb(0, 31, 63);
+            margin-top: 50px;
+            font-size: 20px;
+            color: white;
+            padding: 30px;
+        }
+        }
+        @media (min-width: 1200px) and (max-width: 1496px){
+            #container{width: 100%;}
+        #header {
+            height: 70px;
+            display: flex;}
+            
+        ul{
+            list-style: none;
+            background-color: rgba(0, 31, 63, 0.938) ;
+            display: flex;
+            justify-content: space-evenly;
+            height: 70px;
+            width: 100%;
+            max-width: 1536px;
+            position :fixed;}
+        ul li{
+            display : inline-block;
+            padding-top:9px;
+            padding-bottom: 8px;}
+        ul li a{
+            display: block;
+            font-size: 24px;
+            padding: 12px 20px;
+            padding-bottom: 12px;
+            text-decoration: none;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;}
+        ul li a:hover{
+                background-color: red;
+                color:white;
+                font-weight: bold;}
+        .picture{
+            height: 625px;
+            width: 100%;
+            max-width: 1536px;
+            background-image: url(./img/picture.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom :15px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h5{
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            width: 300px;
+        }
+        h5:hover{
+            margin-left: 20px;
+            transition: .1s;
+        }
+        .picture a{
+            text-decoration: none;
+        }
+        .section-1{
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        #sec1l{
+            order: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 320px;
+        }
+        #sec1r{
+            order: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 320px;
+        }
+        .circle{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 5px solid red;
+        }
+        #search-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 30px;
+        }
+        h4{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 400px;
+            }
+        h3{
+            text-align: center;
+            margin: 10px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 200px;    
+        }
+        h3:hover{
+            background-color: skyblue;
+            color: darkblue;
+            border: 4px solid darkblue;
+        }
+        .section-1 a{
+            text-decoration: none;
+        }
+        .circle:hover{
+            border: 10px dashed blue;
+        }
+        #search-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        #search-section h2{
+            font-weight: bold;
+             color: black;
+             text-align: center;
+              margin-top: 40px;
+              margin-bottom: 60px;
+        }
+        .boys{
+            
+            width: 85%;
+            height: 300px;
+            background-color: skyblue;
+            border: 5px solid darkblue;
+            border-radius: 30px;
+            margin: 0px auto; 
+            padding: 5px 70px;
+            justify-content:center;
+            
+        }
+        .boys h1{
+            color: white;
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .boys:hover{
+            background-image: linear-gradient(to right,blue,white);
+            border-color: darkblue;
+        }
+        .boys p a{
+            background-color: white;
+            border: 3px solid darkblue;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: blue;
+        }
+        .boys p a:hover{
+            background-color: darkblue;
+            border: 5px solid white;
+            color: white;
+            
+        }
+        #girls{
+            width: 85%;
+            height: 300px;
+            background-image: linear-gradient(to right,magenta,pink);
+            border: 5px solid darkmagenta;
+            border-radius: 30px;
+            margin: 0px auto; 
+            margin-top: 30px;
+            padding: 5px 70px;
+            justify-content:center;
+        }
+        #girls h1{
+            color: white;
+             margin-top: 15px;
+             text-align: center;
+             margin-bottom: 30px;
+        }
+        #girls:hover{
+            background-image: linear-gradient(to right,pink,magenta);
+            
+        }
+        #girls p a{
+            background-color:white;
+            border: 3px solid darkmagenta;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: magenta;
+        }
+        #girls p a:hover{
+            background-color:darkmagenta;
+            border: 5px solid white;
+            color: white;
+            
+        }
+        #sec-2{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 510px;
+            margin-top: 40px;
+        }
+        #sec-2 p{
+            text-align: justify;
+        }
+        #sec-2 h2{
+            color: white;
+        }
+        #left{
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #right{
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #left #l1{
+            order: 1;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l2{
+            order: 2;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l3{
+            order: 3;
+            width: 100%;
+            height: 170px;
+            background-color: maroon;
+        }
+        #right #r1{
+            order: 1;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+        }
+        #right #r2{
+            order: 2;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+        }
+        #right #r3{
+            order: 3;
+            width: 100%;
+            height: 170px;
+            background-color: #00203fff;
+        }
+        h2{
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #l1 p{
+            color: white;
+            margin: 10px;
+        }
+        #l2 p{
+            color: white;
+            margin: 10px;
+        }
+        #l3 p{
+            color: white;
+            margin: 10px;
+        }
+        #r1 p{
+            color: white;
+            margin: 10px;
+        }
+        #r2 p{
+            color: white;
+            margin: 10px;
+        }
+        #r3 p{
+            color: white;
+            margin: 10px;
+        }
+        #footer{
+            width: 100%;
+            height: 120px;
+            background-color:rgb(0, 31, 63);
+            margin-top: 50px;
+            font-size: 20px;
+            color: white;
+            padding: 30px;
+        }
+        } 
+        @media (min-width: 802px) and (max-width: 1200px){
+            #container{width: 100%;}
+        #header {
+            height: 70px;
+            display: flex;}
+        ul{
+            list-style: none;
+            background-color: rgba(0, 31, 63, 0.938) ;
+            display: flex;
+            justify-content: space-evenly;
+            height: 70px;
+            width: 100%;
+            max-width: 1536px;
+            position :fixed;}
+        ul li{
+            display : inline-block;
+            padding-top:9px;
+            padding-bottom: 8px;}
+        ul li a{
+            display: block;
+            font-size: 20px;
+            padding: 12px 20px;
+            padding-bottom: 12px;
+            text-decoration: none;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;}
+        ul li a:hover{
+                background-color: red;
+                color:white;
+                font-weight: bold;}
+        .picture{
+            height: 450px;
+            width: 100%;
+            max-width: 1536px;
+            background-image: url(./img/picture.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom :15px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h5{
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            width: 200px;
+        }
+        h5:hover{
+            margin-left: 20px;
+            transition: .1s;
+        }
+        .picture a{
+            text-decoration: none;
+        }
+        .section-1{
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        #sec1l{
+            order: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 320px;
+        }
+        #sec1r{
+            order: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 320px;
+        }
+        .circle{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 5px solid red;
+        }
+        #search-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 30px;
+        }
+        h4{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 400px;
+            }
+        h3{
+            text-align: center;
+            margin: 10px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 200px;    
+        }
+        h3:hover{
+            background-color: skyblue;
+            color: darkblue;
+            border: 4px solid darkblue;
+        }
+        .section-1 a{
+            text-decoration: none;
+        }
+        .circle:hover{
+            border: 10px dashed blue;
+        }
+        #search-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        #search-section h2{
+            font-weight: bold;
+             color: black;
+             text-align: center;
+              margin-top: 40px;
+              margin-bottom: 60px;
+        }
+        .boys{
+            
+            width: 90%;
+            height: 250px;
+            background-color: skyblue;
+            border: 5px solid darkblue;
+            border-radius: 30px;
+            margin: 0px auto; 
+            padding-left:5px;
+            justify-content:center;
+            
+        }
+        .boys h1{
+            color: white;
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 26px;
+        }
+        .boys:hover{
+            background-image: linear-gradient(to right,blue,white);
+            border-color: darkblue;
+        }
+        .boys p a{
+            background-color: white;
+            border: 3px solid darkblue;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: blue;
+        }
+        .boys p a:hover{
+            background-color: darkblue;
+            border: 3px solid white;
+            color: white;
+            
+        }
+        #girls{
+            width: 90%;
+            height: 250px;
+            background-image: linear-gradient(to right,magenta,pink);
+            border: 5px solid darkmagenta;
+            border-radius: 30px;
+            margin: 0px auto; 
+            margin-top: 30px;
+            padding-left: 4px;
+            justify-content:center;
+        }
+        #girls h1{
+            color: white;
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+        #girls:hover{
+            background-image: linear-gradient(to right,pink,magenta);
+            
+        }
+        #girls p a{
+            background-color:white;
+            border: 3px solid darkmagenta;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: magenta;
+        }
+        #girls p a:hover{
+            background-color:darkmagenta;
+            border: 3px solid white;
+            color: white;
+            
+        }
+        #sec-2{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 510px;
+            margin-top: 40px;
+        }
+        #sec-2 p{
+            text-align: justify;
+            font-size: 12px;
+        }
+        #sec-2 h2{
+            color: white;
+        }
+        #left{
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #right{
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #left #l1{
+            order: 1;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l2{
+            order: 2;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l3{
+            order: 3;
+            width: 100%;
+            height: 170px;
+            background-color: maroon;
+        }
+        #right #r1{
+            order: 1;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+        }
+        #right #r2{
+            order: 2;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+        }
+        #right #r3{
+            order: 3;
+            width: 100%;
+            height: 170px;
+            background-color: #00203fff;
+        }
+        h2{
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #l1 p{
+            color: white;
+            margin: 10px;
+        }
+        #l2 p{
+            color: white;
+            margin: 10px;
+        }
+        #l3 p{
+            color: white;
+            margin: 10px;
+        }
+        #r1 p{
+            color: white;
+            margin: 10px;
+        }
+        #r2 p{
+            color: white;
+            margin: 10px;
+        }
+        #r3 p{
+            color: white;
+            margin: 10px;
+        }
+        #footer{
+            width: 100%;
+            height: 120px;
+            background-color:rgb(0, 31, 63);
+            margin-top: 50px;
+            font-size: 20px;
+            color: white;
+            padding: 30px;
+        }
+        }
+        @media (min-width: 626px) and (max-width: 802px){
+            #container{width: 100%;}
+        #header {
+            height: 70px;
+            display: flex;}
+        ul{
+            list-style: none;
+            background-color: rgba(0, 31, 63, 0.938) ;
+            display: flex;
+            justify-content: space-evenly;
+            height: 70px;
+            width: 100%;
+            max-width: 1536px;
+            position :fixed;}
+        ul li{
+            display : inline-block;
+            padding-top:15px;
+            padding-bottom: 8px;}
+        ul li a{
+            display: block;
+            font-size: 18px;
+            padding: 8px 10px;
+            padding-bottom: 12px;
+            text-decoration: none;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;}
+        ul li a:hover{
+                background-color: red;
+                color:white;
+                font-weight: bold;}
+        .picture{
+            height: 350px;
+            width: 100%;
+            max-width: 1536px;
+            background-image: url(./img/picture.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom :15px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h5{
+            background-color: red;
+            color: white;
+            padding: 5px 5px;
+            border-radius: 15px;
+            width: 120px;
+        }
+        h5:hover{
+            margin-left: 20px;
+            transition: .1s;
+        }
+        .picture a{
+            text-decoration: none;
+        }
+        .section-1{
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        #sec1l{
+            order: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 320px;
+        }
+        #sec1r{
+            order: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 320px;
+        }
+        .circle{
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            border: 5px solid red;
+        }
+        #search-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 30px;
+        }
+        h4{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 400px;
+            }
+        h3{
+            text-align: center;
+            margin: 10px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 200px;    
+        }
+        h3:hover{
+            background-color: skyblue;
+            color: darkblue;
+            border: 4px solid darkblue;
+        }
+        .section-1 a{
+            text-decoration: none;
+        }
+        .circle:hover{
+            border: 10px dashed blue;
+        }
+        #search-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        #search-section h2{
+            font-weight: bold;
+             color: black;
+             text-align: center;
+              margin-top: 40px;
+              margin-bottom: 60px;
+        }
+        .boys{
+            
+            width: 92%;
+            height: 250px;
+            background-color: skyblue;
+            border: 5px solid darkblue;
+            border-radius: 30px;
+            margin: 0px auto; 
+            justify-content:center;
+            padding-left: 2px;
+        }
+        .boys h1{
+            color: white;
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 26px;
+        }
+        .boys:hover{
+            background-image: linear-gradient(to right,blue,white);
+            border-color: darkblue;
+        }
+        .boys p a{
+            background-color: white;
+            border: 2px solid darkblue;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: blue;
+        }
+        #A{
+            margin-left: 4px;
+        }
+        #N{
+            margin-left: 3px;
+        }
+        .boys p a:hover{
+            background-color: darkblue;
+            border: 3px solid white;
+            color: white;
+            
+        }
+        #girls{
+            width: 92%;
+            height: 250px;
+            background-image: linear-gradient(to right,magenta,pink);
+            border: 5px solid darkmagenta;
+            border-radius: 30px;
+            margin: 0px auto; 
+            margin-top: 30px;
+            padding-left: 2px;
+            justify-content:center;
+        }
+        #girls h1{
+            color: white;
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+        #girls:hover{
+            background-image: linear-gradient(to right,pink,magenta);
+            
+        }
+        #girls p a{
+            background-color:white;
+            border: 2px solid darkmagenta;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: magenta;
+        }
+        #Ag{
+            margin-left: 4px;
+        }
+        #Ng{
+            margin-left: 3px;
+        }
+        #girls p a:hover{
+            background-color:darkmagenta;
+            border: 3px solid white;
+            color: white;
+            
+        }
+        #sec-2{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 510px;
+            margin-top: 40px;
+        }
+        #sec-2 p{
+            text-align: justify;
+            font-size: 12px;
+        }
+        #sec-2 h2{
+            color: white;
+        }
+        #left{
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #right{
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #left #l1{
+            order: 1;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l2{
+            order: 2;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l3{
+            order: 3;
+            width: 100%;
+            height: 170px;
+            background-color: maroon;
+        }
+        #right #r1{
+            order: 1;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+        }
+        #right #r2{
+            order: 2;
+            width: 100%;
+            height: 170px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+        }
+        #right #r3{
+            order: 3;
+            width: 100%;
+            height: 170px;
+            background-color: #00203fff;
+        }
+        h2{
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #l1 p{
+            color: white;
+            margin: 10px;
+        }
+        #l2 p{
+            color: white;
+            margin: 10px;
+        }
+        #l3 p{
+            color: white;
+            margin: 10px;
+        }
+        #r1 p{
+            color: white;
+            margin: 10px;
+        }
+        #r2 p{
+            color: white;
+            margin: 10px;
+        }
+        #r3 p{
+            color: white;
+            margin: 10px;
+        }
+        #footer{
+            width: 100%;
+            height: 120px;
+            background-color:rgb(0, 31, 63);
+            margin-top: 50px;
+            font-size: 20px;
+            color: white;
+            padding: 30px;
+        }
+        }
+        @media (max-width: 626px){
+            #container{width: 100%;}
+        #header {
+            height: 40px;
+            display: flex;}
+        ul{
+            list-style: none;
+            background-color: rgba(0, 31, 63, 0.938) ;
+            display: flex;
+            justify-content: space-evenly;
+            height: 40px;
+            width: 100%;
+            max-width: 1536px;
+            position :fixed;}
+        ul li{
+            display : inline-block;
+            padding-top:5px;
+            padding-bottom: 8px;}
+        ul li a{
+            display: block;
+            font-size: 14px;
+            padding: 8px 4px;
+            
+            text-decoration: none;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;}
+        ul li a:hover{
+                background-color: red;
+                color:white;
+                font-weight: bold;}
+        .picture{
+            height: 253px;
+            width: 100%;
+            max-width: 1536px;
+            background-image: url(./img/picture.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom :15px;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h5{
+            background-color: red;
+            color: white;
+            padding: 3px 2px;
+            border-radius: 15px;
+            width: 75px;
+        }
+        h5:hover{
+            margin-left: 20px;
+            transition: .1s;
+        }
+        .picture a{
+            text-decoration: none;
+        }
+        .section-1{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        #sec1l{
+            order: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 240px;
+        }
+        #sec1r{
+            order: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            height: 240px;
+        }
+        .circle{
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+            border: 5px solid red;
+        }
+        #search-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 30px;
+        }
+        h4{
+            text-align: center;
+            margin-top: 10px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            width: 280px;
+            font-size: 10px;
+            }
+        h3{
+            text-align: center;
+            margin: 10px;
+            background-color: #00203fff;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            width: 120px;    
+        }
+        h3:hover{
+            background-color: skyblue;
+            color: darkblue;
+            border: 4px solid darkblue;
+        }
+        .section-1 a{
+            text-decoration: none;
+        }
+        .circle:hover{
+            border: 10px dashed blue;
+        }
+        #search-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px;
+        }
+        #search-section h2{
+            font-weight: bold;
+             color: black;
+             text-align: center;
+              margin-bottom: 30px;
+              font-size: 16px;
+        }
+        .boys{
+            width: 92%;
+            background-color: skyblue;
+            border: 5px solid darkblue;
+            border-radius: 30px;
+            margin: 0px auto; 
+            justify-content:center;
+        }
+        .boys h1{
+            color: white;
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+        .boys:hover{
+            background-image: linear-gradient(to right,blue,white);
+            border-color: darkblue;
+        }
+        .boys p a{
+            background-color: white;
+            border: 2px solid darkblue;
+            text-decoration: none;
+            font-size: 10px;
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: blue;
+            margin-left: 6px;
+        }
+        
+        .boys p a:hover{
+            background-color: darkblue;
+            border: 3px solid white;
+            color: white;
+            
+        }
+        #girls{
+            width: 92%;
+            background-image: linear-gradient(to right,magenta,pink);
+            border: 5px solid darkmagenta;
+            border-radius: 30px;
+            margin: 0px auto; 
+            margin-top: 30px;
+            justify-content:center;
+        }
+        #girls h1{
+            color: white;
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+        #girls:hover{
+            background-image: linear-gradient(to right,pink,magenta);
+            
+        }
+        #girls p a{
+            background-color:white;
+            border: 2px solid darkmagenta;
+            text-decoration: none;
+            font-size: 10px;
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: magenta;
+            margin-left: 6px;
+        }
+        
+        #girls p a:hover{
+            background-color:darkmagenta;
+            border: 3px solid white;
+            color: white;
+            
+        }
+        #sec-2{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 800px;
+            margin-top: 40px;
+        }
+        #sec-2 p{
+            text-align: justify;
+            font-size: 12px;
+        }
+        #sec-2 h2{
+            color: white;
+            font-size: 16px;
+        }
+        #left{
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #right{
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        #left #l1{
+            order: 1;
+            width: 100%;
+            height: 33.33%;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+        }
+        #left #l2{
+            order: 2;
+            width: 100%;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: maroon;
+            height: 33.33%;
+        }
+        #left #l3{
+            order: 3;
+            width: 100%;
+            height: 33.33%;
+            background-color: maroon;
+        }
+        #right #r1{
+            order: 1;
+            width: 100%;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+            height: 33.33%;
+        }
+        #right #r2{
+            order: 2;
+            width: 100%;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.719);
+            background-color: #00203fff;
+            height: 33.33%;
+        }
+        #right #r3{
+            order: 3;
+            width: 100%;
+            background-color: #00203fff;
+            height: 33.33%;
+        }
+        h2{
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #l1 p{
+            color: white;
+            margin: 10px;
+        }
+        #l2 p{
+            color: white;
+            margin: 10px;
+        }
+        #l3 p{
+            color: white;
+            margin: 10px;
+        }
+        #r1 p{
+            color: white;
+            margin: 10px;
+        }
+        #r2 p{
+            color: white;
+            margin: 10px;
+        }
+        #r3 p{
+            color: white;
+            margin: 10px;
+        }
+        #footer{
+            width: 100%;
+            height: 60px;
+            background-color:rgb(0, 31, 63);
+            margin-top: 50px;
+            font-size: 10px;
+            color: white;
+            padding: 30px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <ul>
+                <li><a href="#header" style="font-weight: bold; color: white;">BINOD</a></li>
+                <li><a href="#search-heading">Search</a></li>
+                <li><a href="#sec-2">Trending</a></li>
+                <li><a href="#r2">Popular</a></li>
+                <li><a href="#footer">About Us</a></li>
+            </ul>
+        </div>
+        <div class="picture"><br>&nbsp;&nbsp;Best Indian Names Of Decades<br><br>
+        <a href="#sec-2"><h5>&nbsp;&nbsp;Best of 80s</h5></a><br>
+        <a href="#l2"><h5>&nbsp;&nbsp;Best of 90s</h5></a><br>
+        <a href="#l3"><h5>&nbsp;&nbsp;Early 2000s</h5></a><br>
+        <a href="#r3"><h5>&nbsp;&nbsp;Newest</h5></a>
+        </div>
+        <div id="search-heading"><h4 style="text-align: center;">Click among options given below to search</h4></div>
+        <div class="section-1">
+            
+        <div id="sec1l">
+            <div id="c1">
+                <a href="#search-section"><img src="./img/baby-boy.jpg" class="circle" ></a><br>
+                <center><a href="#search-section"><h3>Boys</h3></a></center>
+            </div>
+        </div>
+        <div id="sec1r">
+            <div id="c2">
+                <a href="#girls"><img src="./img/baby-girl.jpg" class="circle" ></a><br>
+                <center><a href="#girls"><h3>Girls</h3></a></center>
+            </div>
+        </div>
+        </div>
+        <div id="search-section"><h2>Search - Section</h2>
+        </div>
+        <div id="bng">
+        <div class="boys"><h1>For boys choose the desired starting letter</h1>
+        <p style="line-height: 80px;">
+        &nbsp;<a href="./Names/boys/ab.html" id="A">A</a>&nbsp;&nbsp;
+        <a href="./Names/boys/bb.html">B</a>&nbsp;&nbsp;
+        <a href="./Names/boys/cb.html">C</a>&nbsp;&nbsp;
+        <a href="./Names/boys/db.html">D</a>&nbsp;&nbsp;
+        <a href="./Names/boys/eb.html">E</a>&nbsp;&nbsp;
+        <a href="./Names/boys/fb.html">F</a>&nbsp;&nbsp;
+        <a href="./Names/boys/gb.html">G</a>&nbsp;&nbsp;
+        <a href="./Names/boys/hb.html">H</a>&nbsp;&nbsp;
+        <a href="./Names/boys/ib.html">I</a>&nbsp;&nbsp;
+        <a href="./Names/boys/jb.html">J</a>&nbsp;&nbsp;
+        <a href="./Names/boys/kb.html">K</a>&nbsp;&nbsp;
+        <a href="./Names/boys/lb.html">L</a>&nbsp;&nbsp;
+        <a href="./Names/boys/mb.html">M</a>&nbsp;&nbsp;
+        <a href="./Names/boys/nb.html" id="N">N</a>&nbsp;&nbsp;
+        <a href="./Names/boys/ob.html">O</a>&nbsp;&nbsp;
+        <a href="./Names/boys/pb.html">P</a>&nbsp;&nbsp;
+        <a href="./Names/boys/qb.html">Q</a>&nbsp;&nbsp;
+        <a href="./Names/boys/rb.html">R</a>&nbsp;&nbsp;
+        <a href="./Names/boys/sb.html">S</a>&nbsp;&nbsp;
+        <a href="./Names/boys/tb.html">T</a>&nbsp;&nbsp;
+        <a href="./Names/boys/ub.html">U</a>&nbsp;&nbsp;
+        <a href="./Names/boys/vb.html">V</a>&nbsp;&nbsp;
+        <a href="./Names/boys/wb.html">W</a>&nbsp;&nbsp;
+        <a href="./Names/boys/xb.html">X</a>&nbsp;&nbsp;
+        <a href="./Names/boys/yb.html">Y</a>&nbsp;&nbsp;
+        <a href="./Names/boys/zb.html">Z</a>&nbsp;&nbsp;
+    </p>
+        </div>
+        <div id="girls"><h1>For girls choose the desired starting letter</h1>
+            <p style="line-height: 80px;">
+                &nbsp;<a href="./Names/girls/ag.html" id="Ag">A</a>&nbsp;&nbsp;
+                <a href="./Names/girls/bg.html">B</a>&nbsp;&nbsp;
+                <a href="./Names/girls/cg.html">C</a>&nbsp;&nbsp;
+                <a href="./Names/girls/dg.html">D</a>&nbsp;&nbsp;
+                <a href="./Names/girls/eg.html">E</a>&nbsp;&nbsp;
+                <a href="./Names/girls/fg.html">F</a>&nbsp;&nbsp;
+                <a href="./Names/girls/gg.html">G</a>&nbsp;&nbsp;
+                <a href="./Names/girls/hg.html">H</a>&nbsp;&nbsp;
+                <a href="./Names/girls/ig.html">I</a>&nbsp;&nbsp;
+                <a href="./Names/girls/jg.html">J</a>&nbsp;&nbsp;
+                <a href="./Names/girls/kg.html">K</a>&nbsp;&nbsp;
+                <a href="./Names/girls/lg.html">L</a>&nbsp;&nbsp;
+                <a href="./Names/girls/mg.html">M</a>&nbsp;&nbsp;
+                <a href="./Names/girls/ng.html" id="Ng">N</a>&nbsp;&nbsp;
+                <a href="./Names/girls/og.html">O</a>&nbsp;&nbsp;
+                <a href="./Names/girls/pg.html">P</a>&nbsp;&nbsp;
+                <a href="./Names/girls/qg.html">Q</a>&nbsp;&nbsp;
+                <a href="./Names/girls/rg.html">R</a>&nbsp;&nbsp;
+                <a href="./Names/girls/sg.html">S</a>&nbsp;&nbsp;
+                <a href="./Names/girls/tg.html">T</a>&nbsp;&nbsp;
+                <a href="./Names/girls/ug.html">U</a>&nbsp;&nbsp;
+                <a href="./Names/girls/vg.html">V</a>&nbsp;&nbsp;
+                <a href="./Names/girls/wg.html">W</a>&nbsp;&nbsp;
+                <a href="./Names/girls/xg.html">X</a>&nbsp;&nbsp;
+                <a href="./Names/girls/yg.html">Y</a>&nbsp;&nbsp;
+                <a href="./Names/girls/zg.html">Z</a>&nbsp;&nbsp;
+            </p>
+        </div>
+    </div>
+        <div id="sec-2">
+            <div id="left">
+                <div id="l1"><h2>Best of 80s</h2>
+                <p>
+                    <u><b><i>Boys</i></b></u>: Rajesh, Dharminder, Jagdish, Rajnath, Aloknath, Amarnath, Jitender, Mithun, Shravan, Surendra, Rajendra, Krishna, Raheem, Kartik, Farahan, Chiranjeevi, Aanandram, Jairam, Ram.<br>
+                    <u><b><i>Girls</i></b></u>: Rekha, Jay, Sushma, Sharda, Seeta, Geeta, Bharkha, Rupali, kishori, Methali, Madhuri, Sridevi, Chandramukhi, Nargis, Farah, Kajol, Tanuja, Anarkali, Laxmi, Gauri, Sushmita, Gia.   
+                </p>
+                </div>
+                <div id="l2"><h2>Best of 90s</h2>
+                <p>
+                    <u><b><i>Boys</i></b></u>: Arjun, Karan, Raj, Rohit, Ronit, Vinod, Vijay, Ajay, Aryan, Ayush, Shivam, Rahul, Dev, Himanshu, Sumit, Rakesh, Sanjay, Harshit, Tejas, Akarsh, Rajash, Harsh, Salman, Sharukh. <br>
+                    <u><b><i>Girls</i></b></u>: Kareena, Aishwariya, Karishma, Prachi, Priya, Piya, Disha, Diya, Neetu, Nidhi, Meena, Priyanka, Isha, Shivangi, Anjali, Sukriti, Kirti, Tanya, Vanshika, Shalini, Nikita, Kavita, Aanchal.  
+                </p>
+                </div>
+                <div id="l3"><h2>Early 2000s</h2>
+                <p>
+                    <u><b><i>Boys</i></b></u>: Suryansh, Vansh, Ansul, Priyanshu, Priyank, Abhi, Vishesh, Vishal, Mayank, Vaibhav, Nikhil, Nitesh, Rehan, Shivanshu, Sid, Virat, Viraj, Siraj, Shezad, Hitesh, Ali, Nishant, Asim. <br>
+                    <u><b><i>Girls</i></b></u>: Shriyanshi, Aisha, Hina, Gauhar, Rubina, Nikki, Plaksha, Sandhya, Riya, Ishu, Somya, Srishti, Divya, Shefali, Shenaaz, Satakshi, Shakshi, Shradha, Kamya, Neha, Sara, Zara, Jennifer.
+                </p></div>
+            </div>
+            <div id="right">
+                <div id="r1"><h2>Trending</h2>
+                <p>
+                    <u><b><i>Boys</i></b></u>: Siddharth, Asim, Rehan, Nhikhil, Rahul, Taimur, Tony, Kartik, Virat, Rohit, Aly, Sushant, Prince, Samar, Eijaz, Nishant, Suryansh, Priyank, Gurmeet, Shebaaz, Kapil, Mohsin, Darshan. <br>
+                    <u><b><i>Girls</i></b></u>: Shenaaz, Divya, Aisha, Ash, Neha, Nancy, Mahira, Kaira, Naira, Ipsita, Anushka, Ria, Khushi, Apurva, Shyrinn, Arishfa, Niharika, Sukiriti, Sneha, Adah, Hina, Ashima, Janvi, Rajvee.
+                </p>
+            </div>
+                <div id="r2"><h2>Most Popular</h2>
+                    <p>
+                    <u><b><i>Boys</i></b></u>: Vinod, Vijay, Rahul, Vishal, Mayank, Akshay, Raj, Rakesh, Sanjay, Anil, Anoop, Neeraj, Virat, Rohit, Ayush, Aly, Taimur, Sharukh, Salman, Nikhil, Gaurav, Akash, Vikas, Pankaj, Aryan. <br> 
+                    <u><b><i>Girls</i></b></u>: Rashmi, Sara, Devoleena, Kavita, Jasmine, Gopi, Aarti, Mahira, Shenaaz, Aisha, Ashwariya, Neelam, Naira, Kaira, Khushi, Lata, Ritika, Diya, Riya, Prachi, Nandini, Pooja, Shalini.
+                    </p>
+                </div>
+                <div id="r3"><h2>Newest</h2>
+                    <p>
+                    <u><b><i>Boys</i></b></u>: Kairav, Awez, Aarav, Aarush, Abeer, Atharv, Dakshesh, Ekansh, Gaurang, Ishaan, Manan, Daksh, Nakul, Rayaan, Rudranew, Rushil, Samaksh, Samar, Udarsh, Vedant, Vehaan, Vivaan. <br>
+                    <u><b><i>Girls</i></b></u>: Goldy, Apurviya, Anu, Keshva, Kaira, Aarna, Chhaya, Chakrika, Chara, Daksha, Dhirti, Darika, Ekaja, Rabhya, Shravya, Ela, Gulika, Hiral, Hemangini, Jeevika, Kashvi, Kalki, Oorvi, Turvi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <center>Website template for FullStack Project 2020-21  
+                <br><a href="#header" style="text-decoration: none; color: white; font-weight:bold;"><U>Back to top</U></a><br>                
+            </center>
+        </div>
+</div>
+</body>
+</html>

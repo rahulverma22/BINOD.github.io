@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Names</title>
+    <style>
+        #container {max-width: 1536px;
+                margin: 0px auto;}
+        body
+        {
+            background-image:linear-gradient(to right,skyblue,white);
+            }
+            @media (min-width: 800px){
+        #container{width: 100%;}
+        h1
+        {
+            font-style: italic;
+            font-size: 50px;
+            position: relative;
+            
+
+        }
+        a{
+            text-decoration: none;
+            color:darkblue;
+        }
+        a:hover{
+            color:green;
+        }
+        h1::before, h1::after{
+            content: '';
+            display: block;
+            width:0;
+            height:3px;
+            background-color: blue;
+            position:absolute;
+            transition: all .3s;
+        }
+        h1::before{
+            left:0px;
+            top:-10px;
+        }
+        h1::after{
+            right: 0px;
+            bottom:-10px;
+        }
+        h1:hover::before,h1:hover::after{
+            width:100%;
+
+        }
+        p
+        { 
+            margin-top: 0px;
+            margin-bottom: 40px;
+            border:5px solid white;
+            border-radius: 50%;
+            width:130px;
+            height:130px;
+            background-color: darkblue;
+            font-size: 80px;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p:hover{
+            border:5px dashed white;
+            background-color: darkblue;
+            color:white
+        }
+        .rv{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 20px;
+            margin-left: 7rem;
+            font-size: 30px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .rv:hover{
+            border:5px dashed white;
+            background-color:blue;
+           
+            
+        }
+        .rv1{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 20px;
+            margin-left: 7rem;
+            font-size: 30px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .rv1:hover{
+            border:5px dashed white;
+            background-color:blue;
+            
+        }
+        .rv2{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 20px;
+            margin-left: 7rem;
+            font-size: 30px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .rv2:hover{
+            border:5px dashed white;
+            background-color:blue;
+            
+            
+        }
+        .rv3{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 20px;
+            margin-left: 7rem;
+            font-size: 30px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .rv3:hover{
+            border:5px dashed white;
+            background-color:blue;
+            
+        }
+        .rv4{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 20px;
+            margin-left: 7rem;
+            font-size: 30px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .rv4:hover{
+            border:5px dashed white;
+            background-color:blue;
+                
+            
+        }
+        .rv5{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 30px;
+            margin-left: 7rem;
+            font-size: 30px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .rv5:hover{
+            border:5px dashed white;
+            background-color:blue;
+            
+            
+        }
+        .rv6{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 30px;
+            margin-left: 7rem;
+            font-size: 30px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .rv6:hover{
+            border:5px dashed white;
+            background-color:blue;
+            
+        }
+        .rv7{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 30px;
+            margin-left: 7rem;
+            font-size: 30px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .rv7:hover{
+            border:5px dashed white;
+            background-color:blue;
+            
+            
+        }
+        .rv8{border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 30px;
+            margin-left: 7rem;
+            font-size: 30px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .rv8:hover{
+            border:5px dashed white;
+            background-color:blue;
+            
+            
+        }
+        .rv9{border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 30px;
+            margin-left: 7rem;
+            font-size: 30px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .rv9:hover{
+            border:5px dashed white;
+            background-color:blue;
+            
+            
+        }
+            }
+        @media (max-width: 800px){
+        #container{width: 100%;}
+        body
+        {
+            background-image:linear-gradient(to right,skyblue,white);
+            }
+        h1
+        {
+            font-style: italic;
+            font-size: 40px;
+            position: relative;
+        }
+        a{
+            text-decoration: none;
+            color:darkblue;
+        }
+        a:hover{
+            color:green;
+        }
+        h1::before, h1::after{
+            content: '';
+            display: block;
+            width:0;
+            height:3px;
+            background-color: blue;
+            position:absolute;
+            transition: all .3s;
+        }
+        h1::before{
+            left:0px;
+            top:-8px;
+        }
+        h1::after{
+            right: 0px;
+            bottom:-8px;
+        }
+        h1:hover::before,h1:hover::after{
+            width:100%;}
+        p
+        { 
+            margin-top: 0px;
+            margin-bottom: 40px;
+            border:5px solid white;
+            border-radius: 50%;
+            width:120px;
+            height:120px;
+            background-color: darkblue;
+            font-size: 60px;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p:hover{
+            border:5px dashed white;
+            background-color: darkblue;
+            color:white
+        }
+        .rv{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 20px;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rv:hover{
+            border:5px dashed white;
+            background-color:blue;
+           }
+        .rv1{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 20px;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rv1:hover{
+            border:5px dashed white;
+            background-color:blue;
+        }
+        .rv2{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 20px;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rv2:hover{
+            border:5px dashed white;
+            background-color:blue;
+        }
+        .rv3{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 20px;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rv3:hover{
+            border:5px dashed white;
+            background-color:blue;
+            
+        }
+        .rv4{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 20px;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rv4:hover{
+            border:5px dashed white;
+            background-color:blue;
+        }
+        .rv5{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 30px;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rv5:hover{
+            border:5px dashed white;
+            background-color:blue;
+        }
+        .rv6{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 30px;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rv6:hover{
+            border:5px dashed white;
+            background-color:blue;
+        }
+        .rv7{
+            border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 30px;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rv7:hover{
+            border:5px dashed white;
+            background-color:blue;
+        }
+        .rv8{border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 30px;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rv8:hover{
+            border:5px dashed white;
+            background-color:blue;
+        }
+        .rv9{border:5px solid white;
+            border-radius: 4px;
+            background-color:darkblue;
+            color:white;
+            width:160px;
+            height:50px;
+            margin-top: 30px;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rv9:hover{
+            border:5px dashed white;
+            background-color:blue;
+        }
+        #sec-1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        #sec-1 #1{order: 1;}
+        #sec-1 #2{order: 2;}
+        #sec-1 #3{order: 3;}
+        #sec-1 #4{order: 4;}
+        #sec-1 #5{order: 5;}
+        #sec-1 #6{order: 6;}
+        #sec-1 #7{order: 7;}
+        #sec-1 #8{order: 8;}
+        #sec-1 #9{order: 9;}
+        #sec-1 #10{order: 10;}
+        #sec-1 #11{order: 11;}
+        #sec-1 #12{order: 12;}
+        #sec-1 #13{order: 13;}
+        #sec-1 #14{order: 14;}
+        #sec-1 #15{order: 15;}
+        #sec-1 #16{order: 16;}
+        #sec-1 #17{order: 17;}
+        #sec-1 #18{order: 18;}
+        #sec-1 #19{order: 19;}
+        #sec-1 #20{order: 20;}
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+    <center><h1><a href="https://sury0803.github.io/BINOD/index.html">Best Indian Names Of Decades</a></h1></center>
+    <center><p><b>E</b></p></center>
+<div id="sec-1">
+<div>
+    <div class="rv" id="1">ESHANK</div>
+    <div class="rv1" id="2">EEDIT</div>
+    <div class="rv2" id="3">EEHAN</div>
+    <div class="rv3" id="4">ESHAN</div>
+    <div class="rv4" id="5">EKLAVYA</div>
+</div>
+<div>
+    <div class="rv5" id="6">EKLASH</div>
+    <div class="rv6" id="7">ELISH</div>
+    <div class="rv7" id="8">ELVISH</div>
+    <div class="rv8" id="9">EKANT</div>
+    <div class="rv9" id="10">ELIK</div>
+</div>
+<div>
+    <div class="rv5" id="11">EDEN</div>
+    <div class="rv6" id="12">EEMMA</div>
+    <div class="rv7" id="13">ERDEN</div>
+    <div class="rv8" id="14">EASTER</div>
+    <div class="rv9" id="15">ERAN</div>
+</div>
+<div>
+    <div class="rv5" id="16">ELOHIM</div>
+    <div class="rv6" id="17">ETTA</div>
+    <div class="rv7" id="18">EMAM</div>
+    <div class="rv8" id="19">EHAD</div>
+    <div class="rv9" id="20">EZAS</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>
